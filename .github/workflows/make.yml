@@ -13,7 +13,7 @@ jobs:
     - name: make
       run: make
     - name: upload artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v6
       with:
         name: result-artifact
         path: diary 
