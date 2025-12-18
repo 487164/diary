@@ -1,16 +1,13 @@
 name: make
-
 on:
+  workflow_dispatch:
   push:
-    branches: [ "main" ]
+    branches: [ $default-branch ]
   pull_request:
-    branches: [ "main" ]
-
+    branches: [ $default-branch ]
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v4
     - name: make
